@@ -63,7 +63,7 @@ aphrodite_get_prompt() {
 	echo -n "%F{7}@%f" # at
 	echo -n "%F{1}%m%f" # Host
 	echo -n "%F{1}:%f" # in 
-	echo -n "%F{11}%~" # Dir
+	echo -n "%F{3}%~" # Dir
 	echo -n "$(aphrodite_get_current_branch)" # Git branch
 	# echo -n "\n"
 	echo -n "%{$reset_color%}$(aphrodite_get_welcome_symbol) " # $ or #
