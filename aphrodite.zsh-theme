@@ -42,15 +42,31 @@ aphrodite_get_current_branch() {
 aphrodite_get_prompt() {
 
 	# 256-colors check (will be used later): tput colors
+
+	# 1: Red
+	# 2: Green
+	# 3: Yellow
+	# 4: Teal
+	# 5: Purple
+	# 6: Dark Teal
+	# 7: White?
+	# 8: Dark Grey Blue
+	# 9: Bright Red
+	# 10: Bright Green
+	# 11: Orange
+	# 12: Blue
+	# 13: Purple
+	# 14: Bright Teal
+	# 15: White?
 	
-	echo -n "%F{6}%n%f" # User
-	echo -n "%F{8}@%f" # at
-	echo -n "%F{12}%m%f" # Host
-	echo -n "%F{8}:%f" # in 
-	echo -n "%{$reset_color%}%~" # Dir
+	echo -n "%F{14}%n%f" # User
+	echo -n "%F{7}@%f" # at
+	echo -n "%F{1}%m%f" # Host
+	echo -n "%F{1}:%f" # in 
+	echo -n "%F{11}%~" # Dir
 	echo -n "$(aphrodite_get_current_branch)" # Git branch
-	echo -n "\n"
-	echo -n "$(aphrodite_get_welcome_symbol)%{$reset_color%} " # $ or #
+	# echo -n "\n"
+	echo -n "%{$reset_color%}$(aphrodite_get_welcome_symbol) " # $ or #
 }
 
 export GREP_COLOR='1;31'
