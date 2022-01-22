@@ -18,7 +18,7 @@ aphrodite_get_welcome_symbol() {
 
 	echo -n "%(?..%F{1})"
 	
-	local welcome_symbol='$'
+	local welcome_symbol='»'
 	[ $EUID -ne 0 ] || welcome_symbol='#'
 	
 	echo -n $welcome_symbol
@@ -66,7 +66,7 @@ aphrodite_get_prompt() {
 	echo -n "%F{3}%~" # Dir
 	echo -n "$(aphrodite_get_current_branch)" # Git branch
 	# echo -n "\n"
-	echo -n "%{$reset_color%}$(aphrodite_get_welcome_symbol) " # $ or #
+	echo -n "%{$reset_color%} $(aphrodite_get_welcome_symbol) " # $ or #
 }
 
 export GREP_COLOR='1;31'
